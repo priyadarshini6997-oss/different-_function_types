@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function and its types</title>
+</head>
+<body>
+    <h1>Arithmetic Operations Using Different Function Types</h1>
+    <h2>Function Declaration</h2>
+    <script>
+        function addnumbers(a,b){
+            return a+b;
+        }
+        let sum = addnumbers(10 , 5);
+        console.log("Sum:"+ sum);
+        document.write("Sum:"+ sum + "<br>");
+    </script>
+    <h2>Function Expression</h2>
+    <script>
+        const multiplyNumbers = function(a , b){
+            return a*b;
+        }
+        let product = multiplyNumbers( 10, 5);
+        console.log("Product:"+product);
+        document.write("Product:" + product + "<br>" );
+    </script>
+    <h2>Arrow Function</h2>
+    <script>
+        const subtractNumber = (a,b) => a-b;
+        let subtraction = subtractNumber(10,5);
+        console.log("Subtraction:"+subtraction+"<br>");
+        document.write("Subtraction:"+subtraction+"<br>");
+    </script>
+    <h2>Function with Parameters and Return values</h2>
+    <script>
+        function divideNumber(a ,b){
+            if(b === 0) {
+                return "Division by zero is not allowed";
+            }
+            return a/b;
+        }
+        let division =divideNumber(10 ,5);
+        console.log("Division:"+division);
+        document.write("Division:"+division+"<br>");
+    </script>
+    <script>
+       let globalNumber = 100;
+       function showScope() {
+          let localNumber = 50;
+
+        console.log("Inside function:");
+        console.log("Global number is: " + globalNumber); // accessible
+        console.log("Local number is: " + localNumber);   // accessible
+    }
+
+    showScope();
+
+        console.log("Outside function:");
+        console.log("Global number is: " + globalNumber); // accessible
+        console.log("Local number is: " + localNumber);   // ❌ error - not accessible outside
+
+    </script>
+
+    
+</body>
+</html>
